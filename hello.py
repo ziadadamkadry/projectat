@@ -11,7 +11,7 @@ for num in nums:
         even_num.append(num)
 print(evens, odds)
 print(f'the evens are: {even_num}, the odds are: {odd_num}')
-
+#eslam
 
 
 
