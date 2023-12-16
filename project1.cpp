@@ -1,6 +1,4 @@
 #include <iostream>
-#include <queue>
-#include <deque>
 using namespace std;
 #define size 100
 
@@ -73,6 +71,22 @@ double calculateGradeAverage() {
         return 0;
     }
     return total / count;
+}
+
+void CalcAvgPass(){
+    double sum = 0, n = 0, avg;
+    for (int i = front;i <= rear; i++){
+        if (Queue[i].grade >= 50){
+            sum = sum + Queue[i].grade;
+            n++;
+        }
+        if (n == 0) {
+        cout<<"0";
+        }  
+    }
+    avg = sum/n;
+    cout<< avg;
+} 
 
 int main()
 {
