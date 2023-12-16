@@ -60,6 +60,20 @@ void addStudent() {
     enqueue(Student);
     cout << "Student added to the queue." << endl;
 }
+
+
+double calculateGradeAverage() {
+    double total = 0;
+    int count = 0;
+    for (int i = front; i <= rear; ++i) {
+        total += Queue[i].grade;
+        count++;
+    }
+    if (count == 0) {
+        return 0;
+    }
+    return total / count;
+
 int main()
 {
 
