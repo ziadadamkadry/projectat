@@ -35,6 +35,19 @@ void enqueue(student Student)
         cout<<"The list is full" << endl;
     }
 }
+
+void dequeue()
+{
+        if(front != -1 && rear != -1 && front <= rear)
+    {
+        front++;
+    }
+    else
+    {
+        cout<< "queue is empty" << endl;
+    }
+}
+
 void addStudent() {
     student Student;
     cout << "Enter student ID: ";
