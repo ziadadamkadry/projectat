@@ -101,6 +101,11 @@ void separatestudents(){
 
 int main()
 {
-
-
+    addStudent();
+    addStudent();
+    addStudent();
+    cout<<calculateGradeAverage();
+    separatestudents();
+    CalcAvgPass();
+    
     return 0;}
