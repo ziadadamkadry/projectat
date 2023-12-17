@@ -86,11 +86,21 @@ void CalcAvgPass(){
     }
     avg = sum/n;
     cout<< avg;
+}
+    
+void separatestudents(){
+
+ student   passedqueue[size], failedqueue[size];
+   int    passedrear = -1, failedrear=-1;
+  for (int i=0;i<size;i++)
+    if(Queue[i].grade>=50)
+        enqueue(passedqueue[++passedrear]);
+     else
+       enqueue(failedqueue[++failedrear]);
 } 
 
 int main()
 {
 
 
-    return 0;
-}
+    return 0;}
