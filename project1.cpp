@@ -1,11 +1,13 @@
 #include <iostream>
+#include <string>
 using namespace std;
 #define size 100
+#define max 60 
 
 struct student
 {
     double grade;
-    string name;
+    string name[max];
     int id;
 };
 
@@ -87,25 +89,24 @@ void CalcAvgPass(){
     avg = sum/n;
     cout<< avg;
 }
-    
 void separatestudents(){
+    student passedqueue[size], failedqueue[size];
+    int passedrear = -1, failedrear=-1;
 
- student   passedqueue[size], failedqueue[size];
-   int    passedrear = -1, failedrear=-1;
-  for (int i=0;i<size;i++)
+    for (int i=0;i < rear ;i++)
     if(Queue[i].grade>=50)
-        enqueue(passedqueue[++passedrear]);
-     else
-       enqueue(failedqueue[++failedrear]);
+        passedqueue[++passedrear]= Queue[i];
+    else
+        failedqueue[++failedrear]= Queue[i];
 } 
 
 int main()
 {
     addStudent();
-    addStudent();
-    addStudent();
-    cout<<calculateGradeAverage();
     separatestudents();
+    cout<<"the Average of passed students : "  ;
     CalcAvgPass();
-    
-    return 0;}
+
+
+    return 0;
+}
