@@ -2,12 +2,11 @@
 #include <string>
 using namespace std;
 #define size 100
-#define max 60 
 
 struct student
 {
     double grade;
-    string name[max];
+    string name;
     int id;
 };
 
@@ -48,12 +47,13 @@ void dequeue()
     }
 }
 
-void addStudent() {
+void addStudent()
+{
     student Student;
     cout << "Enter student ID: ";
     cin >> Student.id;
     cout << "Enter student name: ";
-    cin >> Student.name;
+    cin >> Student.name ;
     cout << "Enter student grade: ";
     cin >> Student.grade;
 
@@ -62,34 +62,42 @@ void addStudent() {
 }
 
 
-double calculateGradeAverage() {
+double calculateGradeAverage()
+{
     double total = 0;
     int count = 0;
-    for (int i = front; i <= rear; ++i) {
+    for (int i = front; i <= rear; ++i) 
+    {
         total += Queue[i].grade;
         count++;
     }
-    if (count == 0) {
+    if (count == 0) 
+    {
         return 0;
     }
     return total / count;
 }
 
-void CalcAvgPass(){
+void CalcAvgPass()
+{
     double sum = 0, n = 0, avg;
-    for (int i = front;i <= rear; i++){
-        if (Queue[i].grade >= 50){
+    for (int i = front;i <= rear; i++)
+    {
+        if (Queue[i].grade >= 50)
+        {
             sum = sum + Queue[i].grade;
             n++;
         }
-        if (n == 0) {
+        if (n == 0) 
+        {
         cout<<"0";
         }  
     }
     avg = sum/n;
     cout<< avg;
 }
-void separatestudents(){
+void separatestudents()
+{
     student passedqueue[size], failedqueue[size];
     int passedrear = -1, failedrear=-1;
 
@@ -102,6 +110,8 @@ void separatestudents(){
 
 int main()
 {
+    addStudent();
+    addStudent();
     addStudent();
     separatestudents();
     cout<<"the Average of passed students : "  ;
