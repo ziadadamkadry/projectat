@@ -114,7 +114,7 @@ int main()
     addStudent();
     addStudent();
     separatestudents();
-    cout<<"the Average of passed students : "  ;
+    cout<<"The Average of passed students : "  ;
     CalcAvgPass();
 
 
